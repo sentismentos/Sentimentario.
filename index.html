@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f4f1eb">
+<title>Sentimentário</title>
+<style>
+:root{--bg:#f4f1eb;--paper:#fffefa;--ink:#302b27;--muted:#69645f;--line:#ddd6cf}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,'Times New Roman',serif}main{max-width:780px;margin:auto;padding:92px 24px 100px}.site-title{text-align:center;font-size:clamp(3rem,10vw,5rem);font-weight:normal;letter-spacing:-.035em;margin:0 0 100px}.panel{background:var(--paper);border:1px solid var(--line);box-shadow:0 14px 32px #4433220c;padding:clamp(28px,7vw,52px)}.intro{margin-bottom:78px}.intro h2{font-weight:normal;font-size:clamp(2.3rem,7vw,3.5rem);margin:0 0 50px}.intro p{font-size:clamp(1.18rem,4.3vw,1.75rem);line-height:1.65;color:var(--muted);margin:0 0 30px}.intro p:last-child{margin-bottom:0}.entries{display:grid;gap:30px}.entry{min-height:175px;display:flex;flex-direction:column;justify-content:center;gap:23px}.number{font:700 .82rem Georgia,serif;letter-spacing:.26em;color:#806d67}.word a{color:inherit;text-decoration:none;border-bottom:1px solid #b8aaa0;transition:border-color .2s}.word a:hover,.word a:focus-visible{border-bottom-color:currentColor}.word{font-weight:normal;font-size:clamp(2rem,7vw,3.3rem);margin:0;overflow-wrap:anywhere}@media(max-width:480px){main{padding:75px 24px 75px}.site-title{margin-bottom:85px}.intro{margin-bottom:78px}.entries{gap:30px}}
+
+/* Visualizador de referências */
+body.modal-open{overflow:hidden}
+.media-modal{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(27,24,22,.78)}
+.media-modal.is-open{display:flex}
+.media-dialog{width:min(100%,760px);max-height:calc(100dvh - 32px);background:var(--paper);border:1px solid var(--line);display:flex;flex-direction:column;box-shadow:0 25px 80px #0005}
+.media-header{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px 20px;border-bottom:1px solid var(--line)}
+.media-heading{margin:0;font-size:clamp(1.3rem,5vw,2rem);font-weight:normal}
+.media-close{font-size:1.8rem;line-height:1;cursor:pointer;border:0;background:transparent;color:var(--ink);padding:6px 12px}
+.media-body{min-height:0;overflow:hidden;padding:8px;background:#171614;flex:1;display:flex}
+.media-frame{display:block;width:100%;height:min(62dvh,590px);min-height:300px;border:0;background:#000}
+.media-footer{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding:12px 20px;border-top:1px solid var(--line);font: .9rem/1.5 Arial,sans-serif;color:var(--muted)}
+.media-external{color:var(--ink);text-underline-offset:3px}
+/* Reprodutor de áudio compacto */
+.media-body.is-audio{background:var(--paper);padding:24px 18px;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.media-audio{width:100%;max-width:600px;display:block}
+.media-body.is-video{background:#111;padding:12px;align-items:center;justify-content:center;flex:0 1 auto}
+.media-video{display:block;width:100%;max-height:min(65dvh,620px);background:#000;object-fit:contain}
+.media-body.is-video .media-video{min-height:180px}
+.media-switch:focus-visible,.media-close:focus-visible{outline:2px solid #806d67;outline-offset:3px}
+.media-switch{font: .85rem Arial,sans-serif;color:var(--muted);background:none;border:0;text-decoration:underline;cursor:pointer;padding:0;text-underline-offset:3px}
+.media-footer-actions{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.word a{cursor:pointer}
+@media(max-width:480px){.media-modal{padding:10px}.media-dialog{max-height:calc(100dvh - 20px)}.media-body{padding:5px}.media-frame{height:clamp(330px,58dvh,590px);min-height:0}.media-header{padding:12px 14px}.media-footer{padding:12px 14px}}
+@media(max-height:650px){.media-frame{height:48dvh;min-height:0}}
+</style>
+</head>
+<body><main>
+<h1 class="site-title">Sentimentário</h1>
+<section class="panel intro" aria-labelledby="intro-title">
+<h2 id="intro-title">Antes de começar</h2>
+<p>Um sentimentário não é exatamente um dicionário. Aqui, as palavras não são definidas apenas pelo seu significado convencional, mas pela maneira como elas existem dentro de mim.</p>
+<p>Cada palavra abaixo está ligada a alguma coisa que me faz lembrá-la: uma música, um poema, uma fotografia, um filme, uma obra ou qualquer outra referência que tenha significado para mim.</p>
+<p><em>Clique nos links para descobrir o que existe por trás de cada palavra.</em></p>
+</section>
+<section class="entries" aria-label="As 25 palavras">
+<article class="panel entry"><span class="number">01</span><h2 class="word"><a href="https://drive.google.com/file/d/166YxOwQ36s2XgP7n79vYA4rpnmFsR2Tz/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Coração</a></h2></article>
+<article class="panel entry"><span class="number">02</span><h2 class="word"><a href="https://drive.google.com/file/d/15G9I4vdr1ek7U8fGFypkAUVjJEKs08R7/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Consciência</a></h2></article>
+<article class="panel entry"><span class="number">03</span><h2 class="word"><a href="https://drive.google.com/file/d/11AjeEyCicdNSgOF-x_qPJdOWvG3H36fo/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Contradição</a></h2></article>
+<article class="panel entry"><span class="number">04</span><h2 class="word"><a href="https://drive.google.com/file/d/1SPvcLsLaPmFVGlZwvx0D3NoiOILat0rc/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Insistência</a></h2></article>
+<article class="panel entry"><span class="number">05</span><h2 class="word"><a href="https://drive.google.com/file/d/1IgQuL7LqBqfId5pq7lKxvjT8Fta9xw-S/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Paixão</a></h2></article>
+<article class="panel entry"><span class="number">06</span><h2 class="word"><a href="https://drive.google.com/file/d/1UrGyZcz13z-6nUw5-NczfviNAl3PXN7D/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Revolta</a></h2></article>
+<article class="panel entry"><span class="number">07</span><h2 class="word"><a href="https://drive.google.com/file/d/168AnWYWspuyKCSzSInLNj4dTLGx5jbub/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Serenidade</a></h2></article>
+<article class="panel entry"><span class="number">08</span><h2 class="word"><a href="https://drive.google.com/file/d/1hJwygLzR316kGUxfM6rvRM160X2-Jigj/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Dependência</a></h2></article>
+<article class="panel entry"><span class="number">09</span><h2 class="word"><a href="https://drive.google.com/file/d/1ksY3sPqPdf-nEcu8u7zNWNs8urIEgmqY/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Decepção</a></h2></article>
+<article class="panel entry"><span class="number">10</span><h2 class="word"><a href="https://drive.google.com/file/d/1NyV6NIAU5BYl8S-xoqxBP7jD9Ls7tdhI/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Confiança</a></h2></article>
+<article class="panel entry"><span class="number">11</span><h2 class="word"><a href="https://drive.google.com/file/d/1n6ZY6dqFY2Fbj4XZZYPL6HmRmMoZduTD/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Infância</a></h2></article>
+<article class="panel entry"><span class="number">12</span><h2 class="word"><a href="https://drive.google.com/file/d/1R_fERBtLGSH2MFgviRMhet3tp4-i1dxm/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Saudade</a></h2></article>
+<article class="panel entry"><span class="number">13</span><h2 class="word"><a href="https://drive.google.com/file/d/1JP8UVWMKjkWKOugZ5jh0yBORe4eSSNgo/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Fascínio</a></h2></article>
+<article class="panel entry"><span class="number">14</span><h2 class="word"><a href="https://drive.google.com/file/d/1Pa9CF2Jb8XF7jGoS34uh3GEtJh4Vh0Gv/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Determinação</a></h2></article>
+<article class="panel entry"><span class="number">15</span><h2 class="word"><a href="https://drive.google.com/file/d/1Buo1GDt4gih2UB5BUxOaPsQhgdqSQptu/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Cicatrizes</a></h2></article>
+<article class="panel entry"><span class="number">16</span><h2 class="word"><a href="https://drive.google.com/drive/folders/1DAlqchtwk9lKeODyDR5fzPltaWN9rb1x?usp=drive_link" target="_blank" rel="noopener noreferrer">Verdade</a></h2></article>
+<article class="panel entry"><span class="number">17</span><h2 class="word"><a href="https://drive.google.com/drive/folders/1C6grus-fFxzQMJK4Hy9cJHZc3BfY7iQd?usp=drive_link" target="_blank" rel="noopener noreferrer">Cinzas</a></h2></article>
+<article class="panel entry"><span class="number">18</span><h2 class="word"><a href="https://drive.google.com/file/d/1qviOIa8amoQwljwotDlKwkxBdYcZAb83/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Mudança</a></h2></article>
+<article class="panel entry"><span class="number">19</span><h2 class="word"><a href="https://drive.google.com/file/d/148HyZMLuyBS08H6-K1eClfy3VTs9yU7d/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Abdicação</a></h2></article>
+<article class="panel entry"><span class="number">20</span><h2 class="word"><a href="https://drive.google.com/file/d/1E0r70_Syc1I0MeoXDlREBJ5qMTOkYfa9/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Efêmero</a></h2></article>
+<article class="panel entry"><span class="number">21</span><h2 class="word"><a href="https://drive.google.com/drive/folders/1B96yC9JwnQ-WNXrv0bdniXyIxEWCivhD?usp=drive_link" target="_blank" rel="noopener noreferrer">Devir</a></h2></article>
+<article class="panel entry"><span class="number">22</span><h2 class="word"><a href="https://drive.google.com/file/d/1QfnIDT5ecR1X016tCkz59pPXyQ8j22qq/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Desejo</a></h2></article>
+<article class="panel entry"><span class="number">23</span><h2 class="word"><a href="https://drive.google.com/file/d/1RqSJcb_MbtbErmNlrPAGFdd33uvyc8eh/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Veneno</a></h2></article>
+<article class="panel entry"><span class="number">24</span><h2 class="word"><a href="https://drive.google.com/file/d/1oWo5wSwaajy8D5loSia-4xKsQZ1idiEg/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Finitude</a></h2></article>
+<article class="panel entry"><span class="number">25</span><h2 class="word"><a href="https://drive.google.com/file/d/1dInaaW6PfuBpCgsHFrcD4n0B9hCN7V04/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Amor</a></h2></article>
+</section></main>
+<div class="media-modal" id="media-modal" aria-hidden="true">
+  <section class="media-dialog" role="dialog" aria-modal="true" aria-labelledby="media-heading">
+    <header class="media-header"><h2 class="media-heading" id="media-heading"></h2><button class="media-close" id="media-close" type="button" aria-label="Fechar visualizador">×</button></header>
+    <div class="media-body" id="media-body"></div>
+    <footer class="media-footer"><span>Se o conteúdo não carregar, experimente trocar o visualizador ou abrir no Google Drive.</span><span class="media-footer-actions"><button type="button" class="media-switch" id="media-switch" hidden>Ouvir como áudio</button><button type="button" class="media-switch" id="video-switch" hidden>Testar como vídeo</button><a class="media-external" id="media-external" href="#" target="_blank" rel="noopener noreferrer">Abrir no Google Drive ↗</a></span></footer>
+  </section>
+</div>
+<script>
+(() => {
+  const modal = document.getElementById('media-modal');
+  const body = document.getElementById('media-body');
+  const heading = document.getElementById('media-heading');
+  const external = document.getElementById('media-external');
+  const closeButton = document.getElementById('media-close');
+  const switchButton = document.getElementById('media-switch');
+  const videoSwitch = document.getElementById('video-switch');
+  const audioWords = new Set(['Confiança','Contradição','Decepção','Dependência','Fascínio','Infância','Insistência','Paixão','Revolta','Saudade','Serenidade']);
+  const videoWords = new Set(['Mudança','Efêmero','Abdicação']);
+  const mobileDevice = () => window.matchMedia('(max-width: 767px), (pointer: coarse)').matches;
+  let currentType = 'image';
+  let currentFileId = null;
+  let mediaMode = 'drive';
+  let lastTrigger = null;
+
+  function closeModal() {
+    if (!modal.classList.contains('is-open')) return;
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+    body.replaceChildren(); // interrompe áudio/vídeo ao fechar
+    body.classList.remove('is-audio', 'is-video');
+    lastTrigger?.focus();
+  }
+  function openModal(link) {
+    const url = new URL(link.href);
+    const match = url.pathname.match(/^\/file\/d\/([^/]+)/);
+    if (!match) return; // pastas continuam abrindo diretamente no Drive
+    lastTrigger = link;
+    heading.textContent = link.textContent.trim();
+    external.href = link.href;
+    currentFileId = match[1];
+    const word = heading.textContent;
+    currentType = audioWords.has(word) ? 'audio' : videoWords.has(word) ? 'video' : 'image';
+    mediaMode = mobileDevice() && currentType !== 'image' ? currentType : 'drive';
+    renderMedia();
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+    closeButton.focus();
+  }
+  function mediaUrl(id) {
+    return 'https://drive.google.com/uc?export=download&id=' + encodeURIComponent(id);
+  }
+  function renderMedia() {
+    body.replaceChildren(); // encerra qualquer reprodução anterior
+    body.classList.toggle('is-audio', mediaMode === 'audio');
+    body.classList.toggle('is-video', mediaMode === 'video');
+    switchButton.hidden = currentType === 'image';
+    videoSwitch.hidden = true;
+    switchButton.textContent = mediaMode === 'drive' ? (currentType === 'audio' ? 'Ouvir como áudio' : 'Reproduzir vídeo') : 'Visualizar no Drive';
+    if (mediaMode === 'audio') {
+      const audio = document.createElement('audio');
+      audio.className = 'media-audio';
+      audio.controls = true;
+      audio.preload = 'metadata';
+      audio.src = mediaUrl(currentFileId);
+      body.append(audio);
+    } else if (mediaMode === 'video') {
+      const video = document.createElement('video');
+      video.className = 'media-video';
+      video.controls = true;
+      video.playsInline = true;
+      video.preload = 'metadata';
+      video.src = mediaUrl(currentFileId);
+      body.append(video);
+    } else {
+      const frame = document.createElement('iframe');
+      frame.className = 'media-frame';
+      frame.title = 'Conteúdo de ' + heading.textContent;
+      frame.src = 'https://drive.google.com/file/d/' + encodeURIComponent(currentFileId) + '/preview';
+      frame.allow = 'autoplay; fullscreen; picture-in-picture';
+      frame.allowFullscreen = true;
+      frame.referrerPolicy = 'strict-origin-when-cross-origin';
+      body.append(frame);
+    }
+  }
+  switchButton.addEventListener('click', () => {
+    mediaMode = mediaMode === 'drive' ? currentType : 'drive';
+    renderMedia();
+  });
+  document.querySelectorAll('.word a').forEach(link => {
+    link.addEventListener('click', event => {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.button !== 0) return;
+      if (!/drive\.google\.com\/file\/d\//.test(link.href)) return;
+      event.preventDefault();
+      openModal(link);
+    });
+  });
+  closeButton.addEventListener('click', closeModal);
+  modal.addEventListener('click', event => { if (event.target === modal) closeModal(); });
+  document.addEventListener('keydown', event => {
+    if (!modal.classList.contains('is-open')) return;
+    if (event.key === 'Escape') closeModal();
+    if (event.key === 'Tab') {
+      const focusable = [closeButton, switchButton, videoSwitch, external].filter(el => !el.hidden);
+      const current = focusable.indexOf(document.activeElement);
+      if (event.shiftKey && current <= 0) { event.preventDefault(); external.focus(); }
+      else if (!event.shiftKey && current === focusable.length - 1) { event.preventDefault(); closeButton.focus(); }
+    }
+  });
+})();
+</script>
+</body></html>
